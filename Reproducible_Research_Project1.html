@@ -126,18 +126,18 @@ $(document).ready(function () {
 
 <div id="reproducible-researchproject-1" class="section level1">
 <h1>REPRODUCIBLE RESEARCH:PROJECT 1</h1>
-<p>The very first thing a person, wanting to reproduce this project results is to load the data. Please download the data from <a href="https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip">https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip</a> to the following directory that has to be created in your PC: <code>C:\Project 1</code></p>
+<p>The very first thing a person wanting to reproduce this project results needs to do is to load the data. Please download the data from <a href="https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip">https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip</a>, unzipped the file to the following directory that has to be created in your PC: <code>C:\Project_1</code></p>
 </div>
 <div id="loading-and-preprocessing-the-data" class="section level1">
 <h1>Loading and Preprocessing the Data</h1>
 <pre class="r"><code>library(plyr)
 library(ggplot2)
 
-steps1 &lt;- read.csv(&quot;C:/Project 1/activity.csv&quot;)
+steps1 &lt;- read.csv(&quot;C:/Project_1/activity.csv&quot;)
 A1&lt;-na.omit(steps1)</code></pre>
 </div>
-<div id="what-is-mean-total-number-of-steps-taken-per-day" class="section level1">
-<h1>What is mean total number of steps taken per day?</h1>
+<div id="what-is-the-mean-of-the-total-number-of-steps-taken-per-day" class="section level1">
+<h1>What is the mean of the total number of steps taken per day?</h1>
 <p>Following routine will be used to calculate the total number of steps taken per day, having for the latter as output an histogram,</p>
 <pre class="r"><code>A2 &lt;- aggregate(A1$steps ~ A1$date, FUN=sum, )
 colnames(A2)&lt;- c(&quot;date&quot;, &quot;steps&quot;)
