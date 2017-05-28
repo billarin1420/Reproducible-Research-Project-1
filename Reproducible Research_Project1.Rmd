@@ -83,7 +83,7 @@ The following routine creates an histogram of the total number of steps taken ea
 ```{R}
 A3 <- aggregate(steps1$steps ~ steps1$date, FUN=sum, )
 colnames(A3)<- c("Date", "Steps")
-hist(A3$Steps, breaks=5, xlab="Steps", col="blue1", main = "Total Steps per Day")
+hist(A3$Steps, breaks=5, xlab="Steps", col="blue", main = "Total Steps per Day")
 hist(A2$steps, breaks=5, xlab="Steps", col="red", main = "Total Steps per Day", add=T)
 legend("topright", c("Imputed", "Non-imputed"), col=c("blue", "red"), lwd=10)
 ```
