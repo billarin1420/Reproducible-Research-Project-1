@@ -9,7 +9,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE, fig.path = "images/")
 ```
 
-## R Markdown
 REPRODUCIBLE RESEARCH:PROJECT 1
 ===============================
 The very first thing a person, wanting to reproduce this project results is to load the data. Please download the data from https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip to the following directory that has to be created in your PC:
